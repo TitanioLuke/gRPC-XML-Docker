@@ -1,4 +1,4 @@
-# 🧩 TP2-B – Sistemas Distribuídos  
+# TP2-B – Sistemas Distribuídos  
 ### *Integração XML-RPC → gRPC com Docker e docker-compose*
 
 Este projeto implementa um sistema distribuído composto por:
@@ -42,23 +42,23 @@ Codigo/
 
 ---
 
-# 📌 1. Conversão de CSV → XML
+# 1. Conversão de CSV → XML
 ```bash
 python csv_to_xml.py
 ```
 
-# 📌 2. Validação XML com XSD
+# 2. Validação XML com XSD
 ```bash
 python validate_xml.py
 ```
 
-# 📌 3. Servidor XML-RPC
+# 3. Servidor XML-RPC
 ```bash
 python xmlrpc_server.py
 python xmlrpc_client.py
 ```
 
-# 📌 4. Servidor gRPC
+# 4. Servidor gRPC
 ```bash
 cd grpc
 python grpc_server.py
@@ -67,12 +67,12 @@ python grpc_client.py
 
 ---
 
-# 🐳 5. Execução com Docker + Docker Compose
+# 5. Execução com Docker + Docker Compose
 ```bash
 docker compose up --build
 ```
 
 ---
 
-# ✨ Autor
+# Autor
 **Afonso Araújo**
