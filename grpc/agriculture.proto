@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package agriculture;
+
+service AgricultureService {
+  rpc ListAll       (Empty)             returns (ProductList);
+  rpc GetById       (ProductIdRequest)  returns (Product);
+  rpc GetByCategory (CategoryRequest)   returns (ProductList);
+  rpc XPathQuery    (XPathRequest)      returns (XPathResponse);
+}
+
+message Empty {}
+
+message ProductIdRequest {
+  string id = 1;
+}
+
+message CategoryRequest {
+  string category = 1;
+}
+
+message XPathRequest {
+  string expression = 1;
+}
+
+message Product {
+  string id = 1;
+  string category = 2;
+  string name = 3;
+  double price_per_kg = 4;
+  int32 units_shipped_kg = 5;
+  int32 units_sold_kg = 6;
+  int32 units_on_hand_kg = 7;
+  string supplier = 8;
+  string farm_location = 9;
+  string sale_date = 10;
+}
+
+message ProductList {
+  repeated Product products = 1;
+}
+
+message XPathResponse {
+  repeated string results = 1;
+}

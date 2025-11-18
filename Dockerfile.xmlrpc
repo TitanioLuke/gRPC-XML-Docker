@@ -1,0 +1,13 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Copia todos os ficheiros da pasta Codigo para /app no container
+COPY . /app
+
+# Instala dependências necessárias para o XML-RPC
+RUN pip install lxml
+
+EXPOSE 8000
+
+CMD ["python", "xmlrpc_server.py"]

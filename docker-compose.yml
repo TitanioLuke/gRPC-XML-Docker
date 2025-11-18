@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  xmlrpc:
+    build:
+      context: .
+      dockerfile: Dockerfile.xmlrpc
+    container_name: xmlrpc_server
+    ports:
+      - "8000:8000"
+    networks:
+      - backend
+
+  grpc:
+    build:
+      context: ./grpc
+      dockerfile: Dockerfile.grpc
+    container_name: grpc_server
+    ports:
+      - "50051:50051"
+    depends_on:
+      - xmlrpc
+    networks:
+      - backend
+
+networks:
+  backend:

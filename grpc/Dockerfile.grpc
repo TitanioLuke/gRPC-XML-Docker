@@ -1,0 +1,13 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Copia tudo da pasta grpc para /app no container
+COPY . /app
+
+# Instala dependências do gRPC
+RUN pip install grpcio grpcio-tools lxml
+
+EXPOSE 50051
+
+CMD ["python", "grpc_server.py"]
