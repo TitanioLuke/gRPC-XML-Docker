@@ -1,4 +1,4 @@
-# TP2-B – Sistemas Distribuídos  
+# TP2-B – Integração de Sistemas 
 ### *Integração XML-RPC → gRPC com Docker e docker-compose*
 
 Este projeto implementa um sistema distribuído composto por:
@@ -13,7 +13,7 @@ Todo o sistema é modular, validado e executável tanto localmente como em conta
 
 ---
 
-# 📁 Estrutura do Projeto
+# Estrutura do Projeto
 
 ```
 Codigo/
